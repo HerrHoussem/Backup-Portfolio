@@ -1,0 +1,2480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Houssem Eddine Bousseliou - Microsoft Azure Engineer specializing in Azure Backup, Azure Site Recovery, Cloud Infrastructure, Disaster Recovery, Business Continuity and Cloud Support." />
+  <meta name="keywords" content="Houssem Eddine Bousseliou, Microsoft Azure Engineer, Cloud Support Engineer, Azure Backup, Azure Site Recovery, Disaster Recovery, Business Continuity, Cloud Infrastructure, LTIMindtree, Microsoft Project" />
+  <meta name="author" content="Houssem Eddine Bousseliou" />
+  <meta property="og:title" content="Houssem Eddine Bousseliou | Microsoft Azure Engineer" />
+  <meta property="og:description" content="Azure Cloud Engineer portfolio focused on cloud infrastructure, backup, recovery, business continuity and customer success." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="Houssemprofile.jpg" />
+  <meta name="theme-color" content="#0078d4" />
+  <title>Houssem Eddine Bousseliou | Microsoft Azure Engineer</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #eef2fb;
+      --bg-mesh:
+        radial-gradient(ellipse 65% 45% at 10% 0%, rgba(59,130,246,0.22), transparent 62%),
+        radial-gradient(ellipse 55% 42% at 95% 15%, rgba(124,58,237,0.20), transparent 60%),
+        radial-gradient(ellipse 60% 50% at 45% 100%, rgba(34,211,238,0.18), transparent 62%);
+      --surface: #ffffff;
+      --surface-glass: rgba(255, 255, 255, 0.66);
+      --text: #1f2937;
+      --muted: #55657d;
+      --primary: #0078d4;
+      --primary-strong: #004e8c;
+      --accent: #00a3a3;
+      --accent-2: #7c3aed;
+      --border: #dbe5f0;
+      --border-glass: rgba(15, 23, 42, 0.08);
+      --shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      --shadow-glow: 0 18px 40px rgba(15, 23, 42, 0.10), 0 0 0 1px rgba(15,23,42,0.03);
+      --focus: 0 0 0 3px rgba(0, 120, 212, 0.22);
+      --footer: #0f172a;
+      --success: #0ea25a;
+      --star: #fbbf24;
+      --font-display: "Sora", "Segoe UI", sans-serif;
+      --font-body: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body.dark-mode {
+      --bg: #060b18;
+      --bg-mesh:
+        radial-gradient(ellipse 65% 45% at 10% 0%, rgba(59,130,246,0.20), transparent 62%),
+        radial-gradient(ellipse 55% 40% at 95% 12%, rgba(139,92,246,0.18), transparent 60%),
+        radial-gradient(ellipse 60% 50% at 50% 105%, rgba(34,211,238,0.14), transparent 62%);
+      --surface: #101a30;
+      --surface-glass: rgba(19, 29, 51, 0.58);
+      --text: #e9edf7;
+      --muted: #a6b2cc;
+      --primary: #60a5fa;
+      --primary-strong: #3b82f6;
+      --accent: #2dd4bf;
+      --accent-2: #a78bfa;
+      --border: #273449;
+      --border-glass: rgba(255, 255, 255, 0.09);
+      --shadow: 0 12px 30px rgba(2, 6, 23, 0.45);
+      --shadow-glow: 0 20px 45px rgba(2, 6, 23, 0.55), 0 0 0 1px rgba(255,255,255,0.04);
+      --focus: 0 0 0 3px rgba(96, 165, 250, 0.3);
+      --footer: #020617;
+      --success: #22c55e;
+      --star: #facc15;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { min-height: 100%; scroll-behavior: smooth; }
+    body { min-height: 100%; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    body {
+      font-family: var(--font-body);
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg-mesh), var(--bg);
+      background-size: 200% 200%, 100% 100%;
+      background-attachment: fixed;
+      animation: mesh-drift 26s ease-in-out infinite;
+      transition: background-color 0.35s ease, color 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @keyframes mesh-drift {
+      0%, 100% { background-position: 0% 0%, 0 0; }
+      50%      { background-position: 100% 40%, 0 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body { animation: none; }
+    }
+
+    h1, h2, h3, .stack-head h3, .language-name, .stat-number {
+      font-family: var(--font-display);
+      letter-spacing: -0.01em;
+    }
+
+    .page-content { flex: 1; }
+
+    .theme-btn {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      width: 54px;
+      height: 54px;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent-2));
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      z-index: 10000;
+    }
+
+    .theme-btn:hover,
+    .view-mode-btn:hover {
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: var(--shadow-glow);
+    }
+
+    /* ── View-mode toggle (phone / desktop) ── */
+    .view-mode-btn {
+      position: fixed;
+      top: 80px;
+      right: 18px;
+      width: 54px;
+      height: 54px;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .view-mode-btn:hover { transform: translateY(-2px); }
+
+    /* When phone-mode is forced on a wide screen */
+    body.phone-mode {
+      max-width: 430px;
+      margin-left: auto;
+      margin-right: auto;
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+    }
+
+    /* Apply mobile layout overrides when phone-mode is active */
+    body.phone-mode header { padding: 48px 14px 40px; }
+    body.phone-mode .btn-row { flex-direction: column; align-items: stretch; padding: 0 4px; gap: 8px; }
+    body.phone-mode .btn-row .btn { width: 100%; margin: 0; text-align: center; }
+    body.phone-mode section { padding: 36px 14px; }
+    body.phone-mode section[id] { scroll-margin-top: 52px; }
+    body.phone-mode h2 { font-size: 1.4rem; }
+    body.phone-mode .card { padding: 16px; }
+    body.phone-mode .quick-metrics { grid-template-columns: repeat(2, 1fr); }
+    body.phone-mode .profile-pic { width: 120px; height: 120px; }
+    body.phone-mode .profile-frame { padding: 8px; border-radius: 22px; }
+    body.phone-mode .hero-badge { font-size: 0.75rem; padding: 6px 10px; }
+    body.phone-mode .hero-badge-row { gap: 6px; }
+    body.phone-mode .gallery-card.featured { grid-column: span 1; }
+    body.phone-mode .gallery-card { min-height: 220px; }
+    body.phone-mode .skill-card { padding: 14px; }
+    body.phone-mode .stack-card { padding: 14px; }
+    body.phone-mode .stat-number { font-size: 1.55rem; }
+    body.phone-mode .theme-btn { top: 12px; right: 12px; width: 44px; height: 44px; font-size: 1rem; }
+    body.phone-mode .view-mode-btn { top: 64px; right: 12px; width: 44px; height: 44px; font-size: 0.95rem; }
+    body.phone-mode .mobile-nav {
+      display: flex;
+      overflow-x: auto;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.10);
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      padding-right: 56px;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    body.phone-mode .mobile-nav::-webkit-scrollbar { display: none; }
+    body.phone-mode .mobile-nav-link {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      padding: 10px 13px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    body.phone-mode .mobile-nav-link i { font-size: 1rem; }
+    body.phone-mode .mobile-nav-link:hover,
+    body.phone-mode .mobile-nav-link.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+    body.phone-mode .chat-widget { right: 12px; bottom: 12px; }
+    body.phone-mode .chat-container {
+      right: 0;
+      width: min(360px, calc(100vw - 24px));
+      height: 75vh;
+      max-height: 520px;
+      bottom: 74px;
+    }
+
+    .btn:focus-visible,
+    .theme-btn:focus-visible,
+    .view-mode-btn:focus-visible,
+    .chat-button:focus-visible,
+    .chat-send:focus-visible,
+    .chat-close:focus-visible,
+    .chat-input:focus-visible {
+      outline: none;
+      box-shadow: var(--focus);
+    }
+
+    header {
+      background:
+        radial-gradient(ellipse 75% 55% at 18% 28%, rgba(0,120,212,0.40), transparent 65%),
+        radial-gradient(ellipse 52% 42% at 82% 62%, rgba(0,163,163,0.26), transparent 58%),
+        radial-gradient(ellipse 90% 55% at 50% 108%, rgba(6,182,212,0.18), transparent 55%),
+        linear-gradient(160deg, #020c1b 0%, #071d42 45%, #081e40 75%, #030a1c 100%);
+      color: #fff;
+      text-align: center;
+      padding: 84px 20px 64px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    /* Glowing dot-grid network pattern */
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(56,189,248,0.28) 1px, transparent 1px);
+      background-size: 38px 38px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.28) 60%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Aurora ambient light pools */
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 38% at 22% 82%, rgba(0,120,212,0.30), transparent 68%),
+        radial-gradient(ellipse 45% 32% at 78% 88%, rgba(0,183,195,0.22), transparent 62%),
+        radial-gradient(ellipse 35% 28% at 50% 5%, rgba(30,64,175,0.24), transparent 58%);
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(22px);
+    }
+
+    /* Animated orbit rings */
+    .hero-orbit,
+    .hero-orbit::before,
+    .hero-orbit::after {
+      position: absolute;
+      border-radius: 999px;
+      border: 1px solid rgba(56,189,248,0.28);
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-orbit {
+      width: 500px;
+      height: 500px;
+      top: -140px;
+      left: -110px;
+      opacity: 0.45;
+      z-index: 0;
+      animation: hero-orbit-rotate 32s linear infinite;
+    }
+
+    .hero-orbit::before {
+      inset: 65px;
+      border-color: rgba(56,189,248,0.20);
+    }
+
+    .hero-orbit::after {
+      inset: 130px;
+      border-color: rgba(34,211,238,0.15);
+    }
+
+    /* Right-side mirrored orbit ring */
+    .hero-glow-r {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      top: -90px;
+      right: -110px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,183,195,0.24);
+      opacity: 0.38;
+      z-index: 0;
+      pointer-events: none;
+      animation: hero-orbit-rotate 44s linear infinite reverse;
+    }
+
+    .hero-glow-r::before {
+      content: "";
+      position: absolute;
+      inset: 58px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,183,195,0.18);
+    }
+
+    .hero-glow-r::after {
+      content: "";
+      position: absolute;
+      inset: 116px;
+      border-radius: 999px;
+      border: 1px solid rgba(56,189,248,0.12);
+    }
+
+    /* Floating tech particle nodes */
+    .hero-particle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      background: rgba(56,189,248,0.75);
+      box-shadow: 0 0 10px 3px rgba(56,189,248,0.42);
+      animation: particle-float 7s ease-in-out infinite;
+    }
+
+    .hero-particle.p1 { width: 5px; height: 5px; top: 18%; left: 14%; }
+    .hero-particle.p2 { width: 3px; height: 3px; top: 60%; right: 18%; animation-delay: 1.8s; }
+    .hero-particle.p3 { width: 4px; height: 4px; top: 32%; right: 26%; animation-delay: 3.2s; }
+    .hero-particle.p4 { width: 3px; height: 3px; top: 74%; left: 26%; animation-delay: 5.0s; }
+    .hero-particle.p5 { width: 4px; height: 4px; top: 46%; left: 7%;  animation-delay: 2.4s; background: rgba(0,183,195,0.75); box-shadow: 0 0 10px 3px rgba(0,183,195,0.42); }
+    .hero-particle.p6 { width: 3px; height: 3px; top: 22%; right: 11%; animation-delay: 4.1s; background: rgba(0,183,195,0.65); box-shadow: 0 0 8px 2px rgba(0,183,195,0.38); }
+
+    @keyframes hero-orbit-rotate {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    @keyframes particle-float {
+      0%, 100% { transform: translateY(0) scale(1);   opacity: 0.55; }
+      50%       { transform: translateY(-14px) scale(1.45); opacity: 0.92; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-orbit, .hero-glow-r, .hero-particle { animation: none; }
+      .btn::before { transition: none; }
+      .skill-title i, .stack-head h3 i, .language-icon { transition: none; }
+    }
+
+    .profile-frame {
+      width: fit-content;
+      margin: 0 auto 18px;
+      padding: 14px;
+      border-radius: 34px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.24);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.28);
+      backdrop-filter: blur(8px);
+      position: relative;
+      z-index: 1;
+      animation: profile-float 5s ease-in-out infinite;
+    }
+
+    @keyframes profile-float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .profile-frame { animation: none; }
+    }
+
+    .profile-frame::before,
+    .profile-frame::after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border: 2px solid rgba(255,255,255,0.5);
+      opacity: 0.7;
+    }
+
+    .profile-frame::before {
+      top: 12px;
+      left: 12px;
+      border-right: none;
+      border-bottom: none;
+      border-radius: 10px 0 0 0;
+    }
+
+    .profile-frame::after {
+      right: 12px;
+      bottom: 12px;
+      border-left: none;
+      border-top: none;
+      border-radius: 0 0 10px 0;
+    }
+
+    .profile-pic {
+      width: 170px;
+      height: 170px;
+      border-radius: 26px;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.92);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.28);
+      background: #fff;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 auto 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.26);
+      backdrop-filter: blur(6px);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .hero-badge i {
+      background: linear-gradient(135deg, #93c5fd, #c4b5fd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 6px rgba(147, 197, 253, 0.5));
+    }
+
+    h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 8px; position: relative; z-index: 1; }
+    .subtitle {
+      font-size: clamp(1rem, 2.3vw, 1.2rem);
+      margin-bottom: 20px;
+      opacity: 0.96;
+      position: relative;
+      z-index: 1;
+    }
+
+    .welcome-message {
+      max-width: 820px;
+      margin: 0 auto 20px;
+      padding: 14px 18px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 14px;
+      backdrop-filter: blur(6px);
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      display: inline-block;
+      background: linear-gradient(135deg, #ffffff, #eef2ff);
+      color: var(--primary-strong);
+      text-decoration: none;
+      padding: 11px 22px;
+      margin: 6px;
+      border: 1px solid transparent;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 8px 20px rgba(2, 6, 23, 0.22);
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(115deg, transparent 30%, rgba(59,130,246,0.25) 45%, rgba(124,58,237,0.25) 55%, transparent 70%);
+      transform: translateX(-120%);
+      transition: transform 0.6s ease;
+    }
+
+    .btn:hover::before { transform: translateX(120%); }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(59, 130, 246, 0.35), 0 0 0 1px rgba(255,255,255,0.4) inset;
+    }
+
+    .btn:active { transform: translateY(-1px); }
+
+    .visitor-counter {
+      display: none !important;
+    }
+
+    section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 56px 20px;
+    }
+
+    section + section { padding-top: 10px; }
+
+    h2 {
+      color: var(--text);
+      font-size: clamp(1.55rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 18px;
+      position: relative;
+      padding-bottom: 14px;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 52px;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--primary), var(--accent-2));
+    }
+
+    .section-intro {
+      max-width: 780px;
+      margin-bottom: 24px;
+      color: var(--muted);
+    }
+
+    .card,
+    .stat-card,
+    .skill-card,
+    .stack-card,
+    .testimonial-card,
+    .language-card,
+    .ai-highlight-card {
+      background:
+        linear-gradient(160deg,
+          color-mix(in srgb, var(--surface-glass) 94%, var(--primary) 6%),
+          color-mix(in srgb, var(--surface-glass) 94%, var(--accent-2) 6%)
+        ) padding-box,
+        linear-gradient(140deg, var(--primary), var(--accent-2)) border-box;
+      border: 1.5px solid transparent;
+      border-radius: 18px;
+      box-shadow: var(--shadow-glow);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      opacity: 0.94;
+      transition: box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .card:hover,
+    .stat-card:hover,
+    .skill-card:hover,
+    .stack-card:hover,
+    .testimonial-card:hover,
+    .language-card:hover,
+    .ai-highlight-card:hover {
+      opacity: 1;
+      box-shadow: 0 24px 55px rgba(59, 130, 246, 0.22), 0 0 0 1px rgba(124, 58, 237, 0.15);
+    }
+
+    .card { padding: 24px; }
+
+    .quick-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .metric-box {
+      background: color-mix(in srgb, var(--surface) 85%, var(--primary) 15%);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .metric-box .value {
+      font-size: 1.55rem;
+      font-weight: 800;
+      line-height: 1.2;
+      font-family: var(--font-display);
+      background: linear-gradient(120deg, var(--primary), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .metric-box .label {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .skill-card {
+      padding: 20px;
+      transition: transform 0.25s ease;
+    }
+
+    .skill-card:hover { transform: translateY(-4px); }
+
+    .skill-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .skill-title i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      background: linear-gradient(135deg, var(--primary), var(--accent-2));
+      color: #fff;
+      font-size: 0.95rem;
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+      transform: rotate(-6deg);
+      transition: transform 0.4s cubic-bezier(.34,1.56,.64,1), border-radius 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-card:hover .skill-title i {
+      transform: rotate(0deg) scale(1.08);
+      border-radius: 12px;
+    }
+
+    .skill-item { margin-bottom: 12px; }
+
+    .skill-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .skill-bar {
+      width: 100%;
+      height: 10px;
+      background: color-mix(in srgb, var(--surface) 80%, var(--border) 20%);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .skill-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--primary), var(--accent-2), var(--accent));
+      background-size: 200% 100%;
+      animation: skill-shimmer 4s ease-in-out infinite;
+    }
+
+    @keyframes skill-shimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .skill-fill { animation: none; }
+    }
+
+    .languages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .language-card,
+    .ai-highlight-card {
+      padding: 18px;
+      text-align: center;
+      transition: transform 0.25s ease;
+    }
+
+    .language-card:hover,
+    .ai-highlight-card:hover { transform: translateY(-4px); }
+
+    .language-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      margin: 0 auto 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent-2));
+      color: #fff;
+      font-size: 1.5rem;
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.32);
+      transform: rotate(-5deg);
+      transition: transform 0.4s cubic-bezier(.34,1.56,.64,1), border-radius 0.4s ease;
+    }
+
+    .language-card:hover .language-icon,
+    .ai-highlight-card:hover .language-icon {
+      transform: rotate(0deg) scale(1.08);
+      border-radius: 14px;
+    }
+
+    .language-card:nth-of-type(even) .language-icon { transform: rotate(5deg); }
+    .language-card:nth-of-type(even):hover .language-icon { transform: rotate(0deg) scale(1.08); }
+
+    .language-icon.spoken-flag {
+      background: none;
+      box-shadow: none;
+      font-size: 2.8rem;
+      width: auto;
+      height: auto;
+      transform: none;
+    }
+    .language-card:hover .language-icon.spoken-flag { transform: scale(1.12); }
+
+    .language-name {
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .language-proficiency {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+
+    .language-star {
+      color: var(--star);
+      font-size: 1.1rem;
+    }
+
+    .language-level {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .spoken-flag {
+      font-size: 2.8rem;
+      color: inherit;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,.18));
+    }
+
+    .ai-highlight-card {
+      background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 88%, var(--primary) 12%), var(--surface));
+      border: 1px solid color-mix(in srgb, var(--border) 68%, var(--primary) 32%);
+    }
+
+    .ai-highlight-card .language-name {
+      font-size: 1.12rem;
+    }
+
+    .ai-highlight-copy {
+      color: var(--muted);
+      font-size: 0.92rem;
+      max-width: 28ch;
+      margin: 0 auto;
+    }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .stack-card {
+      padding: 20px;
+      transition: transform 0.25s ease;
+    }
+
+    .stack-card:hover { transform: translateY(-4px); }
+
+    .stack-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .stack-head h3 {
+      font-size: 1.06rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .stack-head h3 i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      background: linear-gradient(135deg, var(--primary), var(--accent-2));
+      color: #fff;
+      font-size: 0.85rem;
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+      transform: rotate(-6deg);
+      transition: transform 0.4s cubic-bezier(.34,1.56,.64,1), border-radius 0.4s ease;
+    }
+
+    .stack-card:hover .stack-head h3 i {
+      transform: rotate(0deg) scale(1.08);
+      border-radius: 10px;
+    }
+
+    .stars {
+      color: var(--star);
+      letter-spacing: 1px;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    .stack-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+    }
+
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      min-height: 300px;
+      border: 1px solid transparent;
+      background:
+        linear-gradient(var(--surface), var(--surface)) padding-box,
+        linear-gradient(140deg, color-mix(in srgb, var(--primary) 8%, var(--border-glass)), color-mix(in srgb, var(--accent-2) 8%, var(--border-glass))) border-box;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-glow);
+      background:
+        linear-gradient(var(--surface), var(--surface)) padding-box,
+        linear-gradient(140deg, var(--primary), var(--accent-2)) border-box;
+    }
+
+    .gallery-card.featured {
+      grid-column: span 2;
+      min-height: 360px;
+    }
+
+    .gallery-media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .gallery-card:hover .gallery-media { transform: scale(1.06); }
+
+    .gallery-copy {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 18px;
+      color: #fff;
+      background: linear-gradient(180deg, transparent, rgba(15, 23, 42, 0.84));
+    }
+
+    .gallery-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .gallery-copy p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.87);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .testimonial-card { padding: 20px; }
+    .testimonial-card blockquote { color: var(--text); }
+    .testimonial-meta {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-style: normal;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .stat-card {
+      padding: 22px;
+      text-align: center;
+      transition: transform 0.25s ease;
+    }
+
+    .stat-card:hover { transform: translateY(-4px); }
+
+    .stat-number {
+      font-size: 1.9rem;
+      line-height: 1.2;
+      font-weight: 800;
+      margin-bottom: 6px;
+      background: linear-gradient(120deg, var(--primary), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .stat-card p { color: var(--muted); font-weight: 600; }
+
+    .chat-widget {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 9999;
+    }
+
+    .chat-button {
+      width: 62px;
+      height: 62px;
+      border: none;
+      border-radius: 50%;
+      color: #fff;
+      background: linear-gradient(180deg, var(--primary-strong), #062042);
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .chat-button:hover { transform: scale(1.06) translateY(-2px); box-shadow: var(--shadow-glow); }
+
+    /* Ripple ping, like a droplet hitting water */
+    .chat-button::before {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      opacity: 0;
+      animation: chat-ripple 3.2s ease-out infinite;
+      z-index: 0;
+    }
+
+    @keyframes chat-ripple {
+      0%   { transform: scale(0.75); opacity: 0.55; }
+      70%  { transform: scale(1.35); opacity: 0; }
+      100% { transform: scale(1.35); opacity: 0; }
+    }
+
+    /* Two rotating oversized discs create a liquid waterline inside the circular button */
+    .water-wave {
+      position: absolute;
+      left: 50%;
+      top: 62%;
+      width: 130px;
+      height: 130px;
+      margin-left: -65px;
+      margin-top: -65px;
+      background: linear-gradient(180deg, var(--accent) 0%, var(--primary) 100%);
+      opacity: 0.9;
+      border-radius: 42% 58% 60% 40% / 45% 40% 60% 55%;
+      animation: water-spin 7s linear infinite;
+      z-index: 1;
+    }
+
+    .water-wave.wave-2 {
+      top: 66%;
+      background: linear-gradient(180deg, var(--accent-2) 0%, var(--primary-strong) 100%);
+      opacity: 0.55;
+      animation: water-spin 11s linear infinite reverse;
+    }
+
+    @keyframes water-spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    .chat-button i {
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .chat-button::before, .water-wave { animation: none; }
+    }
+
+    .chat-container {
+      position: absolute;
+      right: 0;
+      bottom: 82px;
+      width: min(380px, calc(100vw - 24px));
+      height: 500px;
+      background: var(--surface-glass);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      border: 1px solid var(--border-glass);
+      border-radius: 22px;
+      box-shadow: var(--shadow-glow);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      visibility: hidden;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(14px) scale(0.97);
+      transform-origin: bottom right;
+      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    }
+
+    .chat-container.active {
+      visibility: visible;
+      pointer-events: auto;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .chat-container { transition: opacity 0.15s ease; }
+    }
+
+    .chat-header {
+      background: linear-gradient(120deg, var(--primary-strong), var(--accent-2));
+      color: #fff;
+      padding: 16px 18px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      clip-path: ellipse(140% 100% at 50% 0%);
+    }
+
+    .chat-header h3 {
+      font-size: 1rem;
+      font-family: var(--font-display);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .chat-header h3 i { font-size: 0.9rem; opacity: 0.9; }
+
+    .chat-close {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .message {
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      margin-bottom: 10px;
+      animation: message-in 0.3s ease;
+    }
+
+    @keyframes message-in {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .message { animation: none; }
+    }
+
+    .message-user { justify-content: flex-end; }
+    .message-assistant { justify-content: flex-start; }
+
+    .message .avatar {
+      flex: 0 0 auto;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary), var(--accent-2));
+      color: #fff;
+      font-size: 0.7rem;
+    }
+
+    .message .bubble {
+      max-width: 78%;
+      padding: 10px 14px;
+      border-radius: 16px;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .message-assistant .bubble {
+      background: color-mix(in srgb, var(--surface) 88%, var(--primary) 12%);
+      border: 1px solid var(--border-glass);
+      border-bottom-left-radius: 4px;
+      color: var(--text);
+    }
+
+    .message-user .bubble {
+      background: linear-gradient(135deg, var(--primary), var(--accent-2));
+      color: #fff;
+      border-bottom-right-radius: 4px;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .chat-input-area {
+      display: flex;
+      gap: 10px;
+      padding: 12px;
+      border-top: 1px solid var(--border-glass);
+      background: transparent;
+    }
+
+    .chat-input {
+      flex: 1;
+      border: 1px solid var(--border-glass);
+      border-radius: 999px;
+      padding: 10px 16px;
+      background: color-mix(in srgb, var(--surface) 80%, transparent 20%);
+      color: var(--text);
+    }
+
+    .chat-input:focus-visible { outline: none; box-shadow: var(--focus); }
+
+    .chat-send {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 auto;
+      border: none;
+      border-radius: 50%;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--accent-2));
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .chat-send:hover { transform: scale(1.06); box-shadow: 0 6px 16px rgba(59,130,246,0.4); }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      background: var(--footer);
+      color: #e2e8f0;
+      padding: 22px 16px calc(22px + env(safe-area-inset-bottom));
+      border-top: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    /* ── Header action-button row ── */
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto 20px;
+      max-width: 640px;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-row .btn { margin: 0; }
+
+    /* ── Mobile navigation bar (hidden on desktop) ── */
+    .mobile-nav { display: none; }
+
+    @media (max-width: 768px) {
+      header { padding: 64px 14px 52px; }
+
+      .btn-row {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 4px;
+        gap: 8px;
+      }
+      .btn-row .btn { width: 100%; margin: 0; text-align: center; }
+      /* fallback for any .btn outside .btn-row */
+      .btn { width: 100%; margin: 8px 0; }
+
+      section { padding: 46px 16px; }
+      /* scroll-margin-top so sticky nav does not hide section headings */
+      section[id] { scroll-margin-top: 52px; }
+
+      .gallery-card.featured { grid-column: span 1; }
+      .profile-frame { padding: 10px; border-radius: 28px; }
+      .profile-pic { width: 148px; height: 148px; border-radius: 22px; }
+      .hero-badge-row { gap: 8px; }
+      .hero-badge { font-size: 0.8rem; }
+      /* Shrink fixed buttons so nav items remain tappable */
+      .theme-btn { top: 12px; right: 12px; width: 44px; height: 44px; font-size: 1rem; }
+      .view-mode-btn { top: 64px; right: 12px; width: 44px; height: 44px; font-size: 0.95rem; }
+
+      /* Sticky mobile nav */
+      .mobile-nav {
+        display: flex;
+        overflow-x: auto;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.10);
+        position: sticky;
+        top: 0;
+        z-index: 900;
+        /* leave right padding so last item is never under the theme/mode buttons */
+        padding-right: 56px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      .mobile-nav::-webkit-scrollbar { display: none; }
+      .mobile-nav-link {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        padding: 10px 13px;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.75rem;
+        font-weight: 700;
+        border-bottom: 2px solid transparent;
+        white-space: nowrap;
+        transition: color 0.2s, border-color 0.2s;
+      }
+      .mobile-nav-link i { font-size: 1rem; }
+      .mobile-nav-link:hover,
+      .mobile-nav-link.active {
+        color: var(--primary);
+        border-bottom-color: var(--primary);
+      }
+
+      .chat-widget { right: 12px; bottom: 12px; }
+      .chat-container {
+        right: 0;
+        width: min(360px, calc(100vw - 24px));
+        height: 68vh;
+        max-height: 520px;
+        bottom: 74px;
+      }
+      .chat-button {
+        width: 54px;
+        height: 54px;
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header { padding: 48px 14px 40px; }
+      .profile-pic { width: 120px; height: 120px; }
+      .profile-frame { padding: 8px; border-radius: 22px; }
+      .hero-badge { font-size: 0.75rem; padding: 6px 10px; }
+      .hero-badge-row { gap: 6px; }
+      section { padding: 36px 14px; }
+      h2 { font-size: 1.4rem; }
+      .card { padding: 16px; }
+      .quick-metrics { grid-template-columns: repeat(2, 1fr); }
+      .skill-card { padding: 14px; }
+      .stack-card { padding: 14px; }
+      .gallery-card { min-height: 220px; }
+      .stat-number { font-size: 1.55rem; }
+      .chat-container { height: 75vh; }
+    }
+
+
+    /* ===== Houssem Portfolio Upgrade: desktop nav, visible counter, top button, modern AI bot ===== */
+    .desktop-nav {
+      position: sticky;
+      top: 0;
+      z-index: 950;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: rgba(8, 15, 35, 0.88);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+      backdrop-filter: blur(16px) saturate(150%);
+      -webkit-backdrop-filter: blur(16px) saturate(150%);
+    }
+    .desktop-nav a {
+      color: #eaf6ff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 8px 13px;
+      border-radius: 999px;
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
+      color: #fff;
+      background: linear-gradient(135deg, rgba(0,120,212,0.32), rgba(124,58,237,0.32));
+      transform: translateY(-1px);
+    }
+    .visitor-counter {
+      display: inline-flex !important;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.26);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-weight: 800;
+      position: relative;
+      z-index: 2;
+    }
+    .visitor-counter img { height: 20px; border-radius: 999px; }
+    #topBtn {
+      position: fixed;
+      left: 20px;
+      bottom: 22px;
+      width: 52px;
+      height: 52px;
+      border: none;
+      border-radius: 50%;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--accent-2));
+      box-shadow: var(--shadow-glow);
+      cursor: pointer;
+      z-index: 10000;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: opacity 0.22s ease, transform 0.22s ease;
+    }
+    #topBtn.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    #topBtn:hover { transform: translateY(-3px); }
+
+    /* Hide old water animation and replace with premium AI orb */
+    .water-wave { display: none !important; }
+    .chat-button {
+      width: 66px;
+      height: 66px;
+      border-radius: 22px 22px 22px 8px;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,0.55), transparent 22%),
+        radial-gradient(circle at 75% 75%, rgba(45,212,191,0.72), transparent 26%),
+        linear-gradient(135deg, #0078d4 0%, #7c3aed 52%, #06b6d4 100%) !important;
+      box-shadow: 0 18px 42px rgba(0, 120, 212, 0.34), 0 0 0 1px rgba(255,255,255,0.18) inset;
+      font-size: 25px;
+      overflow: visible;
+      isolation: isolate;
+    }
+    .chat-button::before {
+      content: "";
+      position: absolute;
+      inset: -7px;
+      border-radius: 28px 28px 28px 12px;
+      background: linear-gradient(135deg, rgba(0,120,212,0.62), rgba(124,58,237,0.52), rgba(6,182,212,0.45));
+      filter: blur(12px);
+      opacity: 0.75;
+      z-index: -2;
+      animation: ai-orb-pulse 2.8s ease-in-out infinite;
+    }
+    .chat-button::after {
+      content: "AI";
+      position: absolute;
+      top: -7px;
+      right: -7px;
+      width: 25px;
+      height: 25px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #08203f;
+      background: #fff;
+      font-family: var(--font-display);
+      font-size: 0.62rem;
+      font-weight: 900;
+      border: 1px solid rgba(255,255,255,0.65);
+      box-shadow: 0 8px 18px rgba(2,6,23,0.22);
+      z-index: 3;
+    }
+    .chat-button i {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      filter: drop-shadow(0 3px 7px rgba(0,0,0,0.32));
+      animation: ai-sparkle-float 3.6s ease-in-out infinite;
+    }
+    @keyframes ai-orb-pulse {
+      0%, 100% { transform: scale(0.96); opacity: 0.58; }
+      50% { transform: scale(1.08); opacity: 0.90; }
+    }
+    @keyframes ai-sparkle-float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-3px) rotate(8deg); }
+    }
+    .chat-header {
+      background: linear-gradient(120deg, #0078d4, #7c3aed, #06b6d4) !important;
+    }
+    .message .avatar {
+      background: linear-gradient(135deg, #0078d4, #7c3aed, #06b6d4) !important;
+      box-shadow: 0 6px 16px rgba(0,120,212,0.25);
+    }
+    @media (max-width: 768px) {
+      .desktop-nav { display: none; }
+      #topBtn { left: 12px; bottom: 84px; width: 46px; height: 46px; }
+      .chat-button { width: 58px; height: 58px; border-radius: 20px 20px 20px 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .chat-button::before,
+      .chat-button i { animation: none; }
+    }
+
+
+
+    /* ===== Houssem Portfolio Upgrade: Azure tech hero, icon colors, name/profile background, Innovation Lab ===== */
+    header {
+      background:
+        linear-gradient(180deg, rgba(2, 8, 23, 0.40), rgba(2, 8, 23, 0.82)),
+        radial-gradient(ellipse 78% 58% at 18% 28%, rgba(0,120,212,0.45), transparent 62%),
+        radial-gradient(ellipse 54% 46% at 84% 60%, rgba(124,58,237,0.35), transparent 60%),
+        url('azure-tech-hero.png') center / cover no-repeat !important;
+      min-height: 720px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    header::before {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+        radial-gradient(circle, rgba(56,189,248,0.32) 1px, transparent 1px) !important;
+      background-size: 64px 64px, 64px 64px, 34px 34px !important;
+      opacity: 0.76;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.72), rgba(0,0,0,0.28), transparent) !important;
+    }
+    .profile-frame {
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.20), rgba(255,255,255,0.05)) padding-box,
+        linear-gradient(135deg, #38bdf8, #7c3aed, #2dd4bf) border-box !important;
+      border: 2px solid transparent !important;
+      box-shadow: 0 24px 70px rgba(0,120,212,0.42), 0 0 0 8px rgba(255,255,255,0.06) !important;
+    }
+    .profile-pic {
+      border-radius: 30px !important;
+      border: 4px solid rgba(255,255,255,0.95) !important;
+      filter: saturate(1.08) contrast(1.04);
+    }
+    h1 {
+      display: inline-block;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 12px 24px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(3, 13, 35, 0.72), rgba(0, 120, 212, 0.28), rgba(124, 58, 237, 0.30));
+      border: 1px solid rgba(255,255,255,0.24);
+      box-shadow: 0 18px 46px rgba(2, 6, 23, 0.38), 0 0 30px rgba(56,189,248,0.16) inset;
+      backdrop-filter: blur(14px) saturate(150%);
+      -webkit-backdrop-filter: blur(14px) saturate(150%);
+      text-shadow: 0 3px 16px rgba(0,0,0,0.38);
+    }
+    .subtitle {
+      width: fit-content;
+      max-width: min(920px, calc(100% - 24px));
+      margin-left: auto;
+      margin-right: auto;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(2, 8, 23, 0.42);
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(10px);
+    }
+    .hero-badge {
+      background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06)) !important;
+      box-shadow: 0 10px 24px rgba(2,6,23,0.20);
+    }
+    .hero-badge:nth-child(1) i { color: #38bdf8 !important; -webkit-text-fill-color: #38bdf8; }
+    .hero-badge:nth-child(2) i { color: #c084fc !important; -webkit-text-fill-color: #c084fc; }
+    .hero-badge:nth-child(3) i { color: #2dd4bf !important; -webkit-text-fill-color: #2dd4bf; }
+
+    .skill-card:nth-child(1) .skill-title i,
+    .stack-card:nth-child(1) .stack-head h3 i,
+    .language-card:nth-child(1) .language-icon { background: linear-gradient(135deg, #0078d4, #38bdf8) !important; }
+    .skill-card:nth-child(2) .skill-title i,
+    .stack-card:nth-child(2) .stack-head h3 i,
+    .language-card:nth-child(2) .language-icon { background: linear-gradient(135deg, #0f766e, #2dd4bf) !important; }
+    .skill-card:nth-child(3) .skill-title i,
+    .stack-card:nth-child(3) .stack-head h3 i,
+    .language-card:nth-child(3) .language-icon { background: linear-gradient(135deg, #7c3aed, #c084fc) !important; }
+    .stack-card:nth-child(4) .stack-head h3 i,
+    .language-card:nth-child(4) .language-icon { background: linear-gradient(135deg, #f59e0b, #facc15) !important; }
+    .stack-card:nth-child(5) .stack-head h3 i,
+    .language-card:nth-child(5) .language-icon { background: linear-gradient(135deg, #ef4444, #fb7185) !important; }
+    .stack-card:nth-child(6) .stack-head h3 i,
+    .language-card:nth-child(6) .language-icon { background: linear-gradient(135deg, #2563eb, #7c3aed) !important; }
+    .skill-fill {
+      background: linear-gradient(90deg, #0078d4, #7c3aed, #2dd4bf) !important;
+      box-shadow: 0 0 16px rgba(56,189,248,0.38);
+    }
+
+    .innovation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    .innovation-card {
+      position: relative;
+      overflow: hidden;
+      padding: 22px;
+      border-radius: 20px;
+      background:
+        linear-gradient(160deg, color-mix(in srgb, var(--surface-glass) 88%, #0078d4 12%), color-mix(in srgb, var(--surface-glass) 88%, #7c3aed 12%)) padding-box,
+        linear-gradient(135deg, #38bdf8, #7c3aed, #2dd4bf) border-box;
+      border: 1.5px solid transparent;
+      box-shadow: var(--shadow-glow);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+    }
+    .innovation-card::before {
+      content: "";
+      position: absolute;
+      inset: -80px -60px auto auto;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(56,189,248,0.34), transparent 68%);
+      pointer-events: none;
+    }
+    .innovation-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 70px rgba(0,120,212,0.26), 0 0 0 1px rgba(255,255,255,0.07) inset;
+    }
+    .innovation-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px 18px 18px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background: linear-gradient(135deg, #0078d4, #7c3aed, #06b6d4);
+      font-size: 1.35rem;
+      box-shadow: 0 12px 26px rgba(0,120,212,0.30);
+      margin-bottom: 14px;
+    }
+    .innovation-card h3 { margin-bottom: 8px; }
+    .innovation-card p { color: var(--muted); font-size: 0.95rem; }
+    @media (max-width: 768px) {
+      header { min-height: auto; }
+      h1 { padding: 10px 16px; border-radius: 18px; }
+      .subtitle { border-radius: 18px; }
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#languages">Programming</a>
+    <a href="#spoken-languages">Languages</a>
+    <a href="#technical-stack">Stack</a>
+    <a href="#innovation-lab">Innovation Lab</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#customer-feedback">Reviews</a>
+    <a href="#impact-stats">Stats</a>
+  </nav>
+
+  <main class="page-content">
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button id="view-mode-toggle" class="view-mode-btn" aria-label="Switch to phone view" title="Switch view mode">
+      <i class="fas fa-mobile-alt"></i>
+    </button>
+    <button id="topBtn" aria-label="Back to top" title="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <header>
+      <span class="hero-orbit"   aria-hidden="true"></span>
+      <span class="hero-glow-r"  aria-hidden="true"></span>
+      <span class="hero-particle p1" aria-hidden="true"></span>
+      <span class="hero-particle p2" aria-hidden="true"></span>
+      <span class="hero-particle p3" aria-hidden="true"></span>
+      <span class="hero-particle p4" aria-hidden="true"></span>
+      <span class="hero-particle p5" aria-hidden="true"></span>
+      <span class="hero-particle p6" aria-hidden="true"></span>
+      <div class="profile-frame">
+        <img src="Houssemprofile.jpg" alt="Houssem Eddine Bousseliou profile picture" class="profile-pic" />
+      </div>
+      <div class="hero-badge-row">
+        <span class="hero-badge"><i class="fas fa-cloud"></i> Azure Cloud</span>
+        <span class="hero-badge"><i class="fas fa-brain"></i> AI Engineer</span>
+        <span class="hero-badge"><i class="fas fa-shield-halved"></i> Business Continuity</span>
+      </div>
+      <h1>Houssem Eddine Bousseliou</h1>
+      <p class="subtitle">Microsoft Azure Engineer | Cloud Infrastructure | Backup & Site Recovery Specialist</p>
+
+      <div class="welcome-message">
+        <strong>Welcome!</strong> I design secure, resilient, and scalable Azure environments with proven delivery in backup, disaster recovery, business continuity, and modern AI-driven solutions.
+      </div>
+
+      <div class="btn-row">
+        <a href="https://wa.me/48510735202" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="HoussemBousseliouCV.pdf" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Download CV</a>
+        <a href="https://github.com/HerrHoussem" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/houssem-eddine-bousseliou-770970200/" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+
+      <div class="visitor-counter" aria-label="Portfolio visitor counter">
+        <i class="fas fa-chart-line" aria-hidden="true"></i>
+        <span>Profile Views</span>
+        <img src="https://komarev.com/ghpvc/?username=HerrHoussem&label=Views&color=0e75b6&style=flat" alt="Profile views counter" />
+      </div>
+    </header>
+
+    <nav class="mobile-nav" aria-label="Page sections">
+      <a href="#about" class="mobile-nav-link"><i class="fas fa-user" aria-hidden="true"></i><span>About</span></a>
+      <a href="#skills" class="mobile-nav-link"><i class="fas fa-layer-group" aria-hidden="true"></i><span>Skills</span></a>
+      <a href="#languages" class="mobile-nav-link"><i class="fas fa-terminal" aria-hidden="true"></i><span>Languages</span></a>
+      <a href="#spoken-languages" class="mobile-nav-link"><i class="fas fa-language" aria-hidden="true"></i><span>Spoken Languages</span></a>
+      <a href="#technical-stack" class="mobile-nav-link"><i class="fas fa-server" aria-hidden="true"></i><span>Stack</span></a>
+      <a href="#innovation-lab" class="mobile-nav-link"><i class="fas fa-lightbulb"></i><span>Innovation</span></a>
+      <a href="#gallery" class="mobile-nav-link"><i class="fas fa-images" aria-hidden="true"></i><span>Gallery</span></a>
+      <a href="#customer-feedback" class="mobile-nav-link"><i class="fas fa-star" aria-hidden="true"></i><span>Reviews</span></a>
+      <a href="#impact-stats" class="mobile-nav-link"><i class="fas fa-chart-bar" aria-hidden="true"></i><span>Stats</span></a>
+    </nav>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>
+          I specialize in Microsoft Azure cloud infrastructure, backup, disaster recovery, and modern AI-enabled engineering solutions.
+          My mission is to help organizations stay secure, highly available, and business-ready through modern cloud operations.
+        </p>
+        <div class="quick-metrics">
+          <div class="metric-box">
+            <div class="value">120+</div>
+            <div class="label">Projects Delivered</div>
+          </div>
+          <div class="metric-box">
+            <div class="value">98%</div>
+            <div class="label">Client Satisfaction</div>
+          </div>
+          <div class="metric-box">
+            <div class="value">99.9%</div>
+            <div class="label">Service Uptime</div>
+          </div>
+          <div class="metric-box">
+            <div class="value">24/7</div>
+            <div class="label">Operational Support</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills & Expertise</h2>
+      <p class="section-intro">
+        A practical overview of my core technical capabilities across Azure infrastructure, business continuity, automation, and platform operations.
+      </p>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <div class="skill-title"><i class="fas fa-cloud"></i> Azure Infrastructure</div>
+
+          <div class="skill-item">
+            <div class="skill-row"><span>Azure Virtual Machines & IaaS</span><span>95%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-row"><span>Azure Networking (VNet, NSG, VPN)</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-row"><span>Identity & Access (Azure AD)</span><span>88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-title"><i class="fas fa-shield-halved"></i> Backup & Disaster Recovery</div>
+
+          <div class="skill-item">
+            <div class="skill-row"><span>Azure Backup</span><span>96%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:96%"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-row"><span>Azure Site Recovery</span><span>94%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:94%"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-row"><span>Business Continuity Planning</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-title"><i class="fas fa-gear"></i> DevOps & Automation</div>
+
+          <div class="skill-item">
+            <div class="skill-row"><span>Infrastructure as Code</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-row"><span>CI/CD Pipelines</span><span>82%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-row"><span>Cloud Cost Optimization</span><span>88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="languages">
+      <h2>Programming Languages</h2>
+      <p class="section-intro">
+        Scripting and programming languages that power my automation, infrastructure management, DevOps workflows, and AI engineering capabilities.
+      </p>
+
+      <div class="languages-grid">
+        <article class="ai-highlight-card">
+          <div class="language-icon"><i class="fas fa-brain"></i></div>
+          <div class="language-name">AI Engineer</div>
+          <div class="language-proficiency">
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">☆</span>
+          </div>
+          <div class="language-level">Advanced Applied AI</div>
+          <p class="ai-highlight-copy">Building intelligent solutions that complement cloud automation, operations, and customer outcomes.</p>
+        </article>
+
+        <article class="language-card">
+          <div class="language-icon"><i class="fas fa-terminal"></i></div>
+          <div class="language-name">PowerShell</div>
+          <div class="language-proficiency">
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+          </div>
+          <div class="language-level">Expert (88%)</div>
+        </article>
+
+        <article class="language-card">
+          <div class="language-icon"><i class="fas fa-code"></i></div>
+          <div class="language-name">Bash / Shell</div>
+          <div class="language-proficiency">
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">☆</span>
+          </div>
+          <div class="language-level">Advanced (82%)</div>
+        </article>
+
+        <article class="language-card">
+          <div class="language-icon"><i class="fab fa-html5"></i></div>
+          <div class="language-name">HTML / CSS</div>
+          <div class="language-proficiency">
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">☆</span>
+          </div>
+          <div class="language-level">Advanced (80%)</div>
+        </article>
+
+        <article class="language-card">
+          <div class="language-icon"><i class="fab fa-js"></i></div>
+          <div class="language-name">JavaScript</div>
+          <div class="language-proficiency">
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">☆</span>
+          </div>
+          <div class="language-level">Advanced (78%)</div>
+        </article>
+
+        <article class="language-card">
+          <div class="language-icon"><i class="fas fa-cube"></i></div>
+          <div class="language-name">Python</div>
+          <div class="language-proficiency">
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">☆</span>
+            <span class="language-star">☆</span>
+          </div>
+          <div class="language-level">Intermediate (75%)</div>
+        </article>
+
+        <article class="language-card">
+          <div class="language-icon"><i class="fas fa-layer-group"></i></div>
+          <div class="language-name">YAML / JSON</div>
+          <div class="language-proficiency">
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+          </div>
+          <div class="language-level">Expert (90%)</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="spoken-languages">
+      <h2>Spoken Languages</h2>
+      <p class="section-intro">
+        Languages I speak and use in professional and everyday communication.
+      </p>
+
+      <div class="languages-grid">
+        <article class="language-card">
+          <div class="language-icon spoken-flag">🇸🇦</div>
+          <div class="language-name">Arabic</div>
+          <div class="language-proficiency">
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+          </div>
+          <div class="language-level">Native (100%)</div>
+        </article>
+
+        <article class="language-card">
+          <div class="language-icon spoken-flag">🇫🇷</div>
+          <div class="language-name">French</div>
+          <div class="language-proficiency">
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+          </div>
+          <div class="language-level">Native / Fluent (100%)</div>
+        </article>
+
+        <article class="language-card">
+          <div class="language-icon spoken-flag">🇬🇧</div>
+          <div class="language-name">English</div>
+          <div class="language-proficiency">
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">☆</span>
+          </div>
+          <div class="language-level">Professional (85%)</div>
+        </article>
+
+        <article class="language-card">
+          <div class="language-icon spoken-flag">🇩🇪</div>
+          <div class="language-name">German</div>
+          <div class="language-proficiency">
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">★</span>
+            <span class="language-star">☆</span>
+            <span class="language-star">☆</span>
+          </div>
+          <div class="language-level">Intermediate (60%)</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="technical-stack">
+      <h2>Technical Stack</h2>
+      <p class="section-intro">
+        Key domains where I provide architecture, implementation, and operational excellence.
+      </p>
+
+      <div class="stack-grid">
+        <article class="stack-card">
+          <div class="stack-head">
+            <h3><i class="fas fa-server"></i> Cloud Infrastructure</h3>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p>Designing and operating scalable Azure environments with high performance and governance best practices.</p>
+        </article>
+
+        <article class="stack-card">
+          <div class="stack-head">
+            <h3><i class="fas fa-life-ring"></i> Backup & Recovery</h3>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p>Implementing robust backup strategies and tested disaster recovery scenarios for business resilience.</p>
+        </article>
+
+        <article class="stack-card">
+          <div class="stack-head">
+            <h3><i class="fas fa-network-wired"></i> Networking & Security</h3>
+            <div class="stars">★★★★☆</div>
+          </div>
+          <p>Configuring secure connectivity, network controls, and identity-aware access across hybrid setups.</p>
+        </article>
+
+        <article class="stack-card">
+          <div class="stack-head">
+            <h3><i class="fas fa-chart-line"></i> Monitoring & Operations</h3>
+            <div class="stars">★★★★☆</div>
+          </div>
+          <p>Using Azure Monitor and operational analytics to maintain uptime, reliability, and fast incident response.</p>
+        </article>
+
+        <article class="stack-card">
+          <div class="stack-head">
+            <h3><i class="fas fa-gear"></i> Automation</h3>
+            <div class="stars">★★★★☆</div>
+          </div>
+          <p>Reducing repetitive work and deployment risk through scripting, automation workflows, and standardization.</p>
+        </article>
+
+        <article class="stack-card">
+          <div class="stack-head">
+            <h3><i class="fas fa-users"></i> Customer Enablement</h3>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p>Translating technical complexity into clear outcomes and trusted partnerships with stakeholders.</p>
+        </article>
+      </div>
+    </section>
+
+
+    <section id="innovation-lab">
+      <h2>Innovation Lab</h2>
+      <p class="section-intro">New portfolio innovations designed to make the website feel more modern, technical, recruiter-friendly, and aligned with Azure engineering.</p>
+      <div class="innovation-grid">
+        <article class="innovation-card">
+          <div class="innovation-icon"><i class="fas fa-brain"></i></div>
+          <h3>AI Portfolio Assistant</h3>
+          <p>A modern assistant widget with AI-style visuals that answers questions about Azure skills, projects, CV, contact links, and technical strengths.</p>
+        </article>
+        <article class="innovation-card">
+          <div class="innovation-icon"><i class="fas fa-cloud-arrow-up"></i></div>
+          <h3>Azure Cloud Hero</h3>
+          <p>A custom tech background around the name and profile picture, giving the first screen a strong cloud-infrastructure identity.</p>
+        </article>
+        <article class="innovation-card">
+          <div class="innovation-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3>BCDR Focus Area</h3>
+          <p>Visual emphasis on Azure Backup, Site Recovery, restore readiness, and business continuity for a stronger Microsoft Azure profile.</p>
+        </article>
+        <article class="innovation-card">
+          <div class="innovation-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+          <h3>Premium UI Motion</h3>
+          <p>Gradient icon colors, glowing cards, floating elements, hover effects, and smoother navigation for a clean professional user experience.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery & Technical Journey</h2>
+      <p class="section-intro">
+        Highlights connected to my technical growth, delivery impact, and customer-facing expertise.
+      </p>
+
+      <div class="gallery-grid">
+        <article class="gallery-card featured">
+          <img src="gallery6.jpg" alt="Master's diploma achievement portrait" class="gallery-media" />
+          <div class="gallery-copy">
+            <span class="gallery-badge"><i class="fas fa-award"></i> Academic Milestone</span>
+            <h3>Master's Degree Achievement</h3>
+            <p>A foundation that strengthened my engineering discipline and cloud architecture mindset.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="gallery1.jpg" alt="Professional portrait beside recognition wall" class="gallery-media" />
+          <div class="gallery-copy">
+            <h3>Professional Presence</h3>
+            <p>Consulting and delivering Azure solutions with reliability-focused execution.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="gallery2.jpg" alt="Azure Site Recovery specialist certificate" class="gallery-media" />
+          <div class="gallery-copy">
+            <h3>Disaster Recovery Expertise</h3>
+            <p>Practical implementation of Site Recovery for mission-critical continuity.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="gallery3.jpg" alt="Recognition graphic for client collaboration and awards" class="gallery-media" />
+          <div class="gallery-copy">
+            <h3>Customer Collaboration</h3>
+            <p>Partnering with teams to align technical delivery with operational goals.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="gallery4.jpg" alt="Azure Recovery certification document" class="gallery-media" />
+          <div class="gallery-copy">
+            <h3>Backup & Compliance Focus</h3>
+            <p>Ensuring recoverability, governance, and audit-ready cloud protection.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="gallery5.jpg" alt="Professional event photo celebrating progress" class="gallery-media" />
+          <div class="gallery-copy">
+            <h3>Continuous Improvement</h3>
+            <p>Learning, iterating, and raising service quality with every engagement.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="gallery7.JPG" alt="Professional gallery image" class="gallery-media" />
+          <div class="gallery-copy">
+            <h3>Professional Journey</h3>
+            <p>Another moment that reflects my growth, commitment, and technical journey.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="customer-feedback">
+      <h2>Customer Satisfaction Messages</h2>
+      <p class="section-intro">
+        Real feedback from clients and stakeholders who trusted me with their critical cloud infrastructure and business continuity solutions.
+      </p>
+      
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <blockquote>"Houssem consistently delivered with professionalism, speed, and deep Azure knowledge. His backup and recovery guidance gave us real confidence in our continuity plan."</blockquote>
+          <p class="testimonial-meta">— Enterprise Infrastructure Stakeholder</p>
+        </article>
+
+        <article class="testimonial-card">
+          <blockquote>"Excellent communication, strong technical ownership, and a calm approach under pressure. A reliable engineer for mission-critical cloud environments."</blockquote>
+          <p class="testimonial-meta">— Operations & Platform Lead</p>
+        </article>
+
+        <article class="testimonial-card">
+          <blockquote>"Houssem helped us simplify complex Azure recovery requirements and translated them into practical, well-executed solutions."</blockquote>
+          <p class="testimonial-meta">— Customer Project Contact</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="impact-stats">
+      <h2>Impact at a Glance</h2>
+      <div class="stats">
+        <article class="stat-card">
+          <div class="stat-number">120+</div>
+          <p>Cloud and infrastructure initiatives supported</p>
+        </article>
+        <article class="stat-card">
+          <div class="stat-number">99.9%</div>
+          <p>Reliability mindset for business-critical services</p>
+        </article>
+        <article class="stat-card">
+          <div class="stat-number">24/7</div>
+          <p>Operational readiness and support orientation</p>
+        </article>
+        <article class="stat-card">
+          <div class="stat-number">98%</div>
+          <p>Client satisfaction through consistent delivery</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="chat-widget">
+    <button class="chat-button" id="chatToggle" aria-label="Open assistant chat">
+      <span class="water-wave" aria-hidden="true"></span>
+      <span class="water-wave wave-2" aria-hidden="true"></span>
+      <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
+    </button>
+
+    <div class="chat-container" id="chatContainer" aria-hidden="true">
+      <div class="chat-header">
+        <h3><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i> AI Portfolio Assistant</h3>
+        <button class="chat-close" id="chatClose" aria-label="Close assistant chat">&times;</button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="message message-assistant">
+          <span class="avatar" aria-hidden="true"><i class="fas fa-wand-magic-sparkles"></i></span>
+          <span class="bubble"><span class="visually-hidden">Assistant: </span><span aria-hidden="true">👋</span> Hi! I'm the AI Portfolio Assistant. Ask me about Houssem's Azure expertise, skills, projects, certifications, contact details, backup &amp; recovery work, and more!</span>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <input type="text" class="chat-input" id="chatInput" placeholder="Ask a question..." />
+        <button class="chat-send" id="chatSend" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Houssem Eddine Bousseliou. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      themeIcon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+      themeIcon.classList.toggle('fa-moon', !isDark);
+      themeIcon.classList.toggle('fa-sun', isDark);
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    const chatToggle = document.getElementById('chatToggle');
+    const chatClose = document.getElementById('chatClose');
+    const chatContainer = document.getElementById('chatContainer');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const chatSend = document.getElementById('chatSend');
+
+    function toggleChat(open) {
+      const shouldOpen = typeof open === 'boolean' ? open : !chatContainer.classList.contains('active');
+      chatContainer.classList.toggle('active', shouldOpen);
+      chatContainer.setAttribute('aria-hidden', String(!shouldOpen));
+      if (shouldOpen) chatInput.focus();
+    }
+
+    chatToggle.addEventListener('click', () => toggleChat());
+    chatClose.addEventListener('click', () => toggleChat(false));
+
+    function appendMessage(sender, text) {
+      const message = document.createElement('div');
+      const isUser = sender === 'You';
+      message.className = `message ${isUser ? 'message-user' : 'message-assistant'}`;
+      // Escape HTML in user input to prevent XSS; bot responses are already safe
+      const escaped = isUser
+        ? text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+        : text;
+      // Wrap emoji characters in aria-hidden spans so screen readers skip decorative icons
+      const safeText = escaped.replace(/(\p{Emoji_Presentation}|\p{Extended_Pictographic})/gu,
+        '<span aria-hidden="true">$1</span>');
+      const avatar = isUser ? '' : '<span class="avatar" aria-hidden="true"><i class="fas fa-wand-magic-sparkles"></i></span>';
+      message.innerHTML = `${avatar}<span class="bubble"><span class="visually-hidden">${sender}: </span>${safeText}</span>`;
+      chatMessages.appendChild(message);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function respondToPrompt(input) {
+      // Normalize: lowercase, strip punctuation (preserve Unicode letters/numbers), collapse whitespace
+      const v = input.toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, ' ').replace(/\s+/g, ' ').trim();
+
+      // ── Contact constants ──
+      const contactLinks = "📱 WhatsApp (+48 510 735 202) · 💼 LinkedIn (linkedin.com/in/houssem-eddine-bousseliou-770970200) · 🐙 GitHub (github.com/HerrHoussem)";
+      const reachOut = "You can reach Houssem directly via WhatsApp, LinkedIn, or GitHub using the links at the top of the page.";
+
+      // ── Greetings ──
+      if (/^(hi|hello|hey|greetings|howdy|yo|sup|hiya|salut|bonjour|ciao|hola)$/.test(v) ||
+          /^(good (morning|afternoon|evening|day)|what(?:\s*s| is) up)/.test(v)) {
+        return "👋 Hello! I'm here to help. You can ask me about Houssem's Azure expertise, skills, projects, certifications, contact info, backup &amp; recovery work, spoken languages, and more!";
+      }
+
+      // ── How are you ──
+      if (/how are you|how(?:'?s| is) it going|how do you do|(are )?you (ok|doing|alright)|how(?:'?s| is) everything/.test(v)) {
+        return "I'm doing great, thanks for asking! 😊 How can I help you today? Feel free to ask about Houssem's skills, projects, or contact details.";
+      }
+
+      // ── Thank you / farewells ──
+      if (/^(thank(s| you)|thx|ty|cheers|bye|goodbye|see you|cya|take care|farewell|perfect|awesome|great|cool|nice|wonderful)$/.test(v) ||
+          /thank you|thanks a lot|many thanks|appreciate it/.test(v)) {
+        return "You're welcome! 😊 Feel free to reach out anytime. You can also connect with Houssem directly via WhatsApp, LinkedIn, or GitHub using the links at the top of the page.";
+      }
+
+      // ── What is this / Help (before skills to catch "what can you do") ──
+      if (/what (is|are) (this|the) (bot|chat|assistant|page|portfolio|site|website)|how does this work|\bwhat can (you|i) (do|help|answer|tell)/.test(v) ||
+          v === 'help' || v === 'what can you do' || v === 'what can i ask') {
+        return "I'm the Portfolio Assistant! 🤖 I can answer questions about Houssem's Azure expertise, skills, projects, certifications, contact info, spoken languages, and much more. Just type your question!";
+      }
+
+      // ── CV / Resume download (before experience to avoid conflict) ──
+      if (/\bcv\b|\bresume\b|\bdownload\b|\bpdf\b|curriculum vitae/.test(v)) {
+        return "You can download Houssem's full CV directly from the portfolio — click the 'Download CV' button at the top of the page to get the PDF version.";
+      }
+
+      // ── About / Who is Houssem ──
+      if (/who (is|are) houssem|about houssem|tell me about (him|yourself|houssem)|introduce yourself|bio|background|who are you/.test(v) ||
+          v === 'about' || v === 'about houssem') {
+        return "Houssem Eddine Bousseliou is a Microsoft Azure Engineer specializing in cloud infrastructure, backup &amp; disaster recovery, and AI-enabled solutions. With 120+ projects delivered and 98% client satisfaction, he helps organizations build secure, highly available, and business-ready cloud environments.";
+      }
+
+      // ── Azure / Cloud infrastructure ──
+      if (/azure|microsoft azure|cloud|iaas|paas|saas|virtual machine|\bvm\b|resource group|subscription|tenant|azure ad|entra id|entra/.test(v)) {
+        return "Houssem is an expert in Microsoft Azure — covering Virtual Machines &amp; IaaS (95%), Azure Networking (90%), Azure AD / Entra ID (88%), and full cloud lifecycle management. He designs resilient, scalable, and governed Azure environments for enterprise clients.";
+      }
+
+      // ── Backup & Disaster Recovery / BCDR ──
+      if (/backup|disaster recovery|site recovery|\basr\b|\bbcdr\b|business continuity|recovery plan|failover|replication|\brto\b|\brpo\b|data protection|restore|continuity plan/.test(v)) {
+        return "Backup &amp; disaster recovery are Houssem's top specializations. He achieves 96% proficiency in Azure Backup and 94% in Azure Site Recovery, delivering tested failover strategies, recovery plans, and BCDR solutions that keep businesses running even in worst-case scenarios.";
+      }
+
+      // ── Programming Languages (before DevOps to catch PowerShell/Python etc.) ──
+      if (/\bpowershell\b|\bpython\b|\bbash\b|scripting language|programming language|coding language|\byaml\b|\bjson\b|\bhtml\b|\bcss\b/.test(v)) {
+        return "Houssem's programming skills include: PowerShell (Expert 88%), Bash/Shell (Advanced 82%), Python (Intermediate 75%), JavaScript (Advanced 78%), HTML/CSS (Advanced 80%), and YAML/JSON (Expert 90%) — all used in cloud automation, DevOps, and AI engineering.";
+      }
+
+      // ── DevOps / Automation / CI-CD / IaC ──
+      if (/\bdevops\b|\bautomation\b|\bci\/cd\b|\bci cd\b|\bpipeline\b|\biac\b|infrastructure as code|\bterraform\b|\bbicep\b|\barm template\b|\bscript\b|\bdeploy\b/.test(v)) {
+        return "Houssem is skilled in DevOps and cloud automation — Infrastructure as Code (85%), CI/CD pipelines (82%), cloud cost optimization (88%), and scripting in PowerShell and Bash. He reduces operational risk and deployment effort through smart automation workflows.";
+      }
+
+      // ── Networking / Security / Identity ──
+      if (/\bnetwork|\bvnet\b|\bnsg\b|\bvpn\b|\bfirewall|\bsubnet|\bdns\b|\bpeering\b|\bload balanc|\bsecurity\b|\bzero trust|\bidentity\b|\baccess control\b|\brbac\b|\biam\b/.test(v)) {
+        return "Houssem configures secure Azure networking — VNet, NSG, VPN Gateway, DNS, and identity-aware access controls. He follows zero-trust principles and governance best practices to protect hybrid cloud environments.";
+      }
+
+      // ── AI / Machine Learning ──
+      if (/\bai\b|artificial intelligence|machine learning|\bml\b|\bopenai\b|\bcognitive\b|\bintelligent\b|\bllm\b|\bgpt\b|\bai engineer\b/.test(v)) {
+        return "Houssem is an Applied AI Engineer, building intelligent solutions that complement cloud automation and customer outcomes. He integrates Azure AI services and applied ML to modernize operations and enhance decision-making.";
+      }
+
+      // ── Monitoring / Operations / Uptime ──
+      if (/\bmonitor\b|\bobservability\b|\balert\b|\blog analytics\b|\bazure monitor\b|\boperations\b|\buptime\b|\bincident\b|\bsla\b|\bavailability\b|\breliability\b/.test(v)) {
+        return "Houssem uses Azure Monitor and Log Analytics to maintain 99.9% uptime, manage SLA compliance, and enable fast incident response for business-critical environments.";
+      }
+
+      // ── Skills / Expertise ──
+      if (/\bskill|\bexpertise|\bcapabilit|\bstrength|\bwhat can\b|\bproficien|\btechnical\b|\bspecializ/.test(v)) {
+        return "Houssem's key technical skills include: ☁️ Azure Infrastructure (95%), 🛡️ Backup &amp; Disaster Recovery (96%), 🌐 Networking &amp; Security (90%), ⚙️ DevOps &amp; Automation (85%), 📊 Monitoring &amp; Operations, and 🤖 AI Engineering. Check the Skills section on the page for the full breakdown!";
+      }
+
+      // ── Spoken Languages ──
+      if (/arabic|french|english|german|\bspeak\b|\bspoken\b|\bfluent\b|\bnative language\b|\bmultilingual\b|spoken language/.test(v)) {
+        return "Houssem speaks Arabic (Native), French (Native/Fluent), English (Professional 85%), and German (Intermediate 60%) — enabling effective collaboration with international clients and teams across the globe.";
+      }
+
+      // ── Cost / Pricing / Quote ──
+      if (/\bcost\b|\bprice\b|\bpricing\b|\brate\b|\bbudget\b|\bfee\b|\bcharge\b|\bquote\b|\bproposal\b/.test(v)) {
+        return "For pricing and project quotes, please contact Houssem directly via WhatsApp or LinkedIn. He'll be happy to discuss your requirements and provide a tailored proposal.";
+      }
+
+      // ── Projects / Portfolio / Work ──
+      if (/\bprojects?\b|\bportfolio\b|\bcase study\b|\binitiative\b|\bdelivery\b|\bimplemented\b|\bbuilt\b|\bwhat have you done\b/.test(v)) {
+        return "Houssem has delivered 120+ cloud and infrastructure projects — spanning Azure migration, disaster recovery, networking, automation workflows, and AI-enhanced solutions. The gallery section on the page highlights key milestones and certifications.";
+      }
+
+      // ── Certifications / Education / Training ──
+      if (/\bcertif|\baz-\d|\bexam\b|\bcredential\b|\bbadge\b|\btraining\b|\bcourse\b|\bdegree\b|\bmaster\b|\buniversity\b|\beducation\b|\bacademic\b/.test(v)) {
+        return "Houssem holds a Master's degree in engineering and has earned multiple Azure certifications, including in Site Recovery and backup solutions. His continuous learning mindset keeps him aligned with the latest Azure innovations.";
+      }
+
+      // ── Experience / Career / History ──
+      if (/\bexperience\b|\bcareer\b|\bjob\b|\brole\b|\bposition\b|\bwork history\b|\byears\b|\bprofessional\b|\bemployment\b/.test(v)) {
+        return "Houssem brings proven professional experience in Microsoft Azure cloud engineering — delivering 120+ projects with 98% client satisfaction, specializing in resilient infrastructure design, BCDR strategy, and cloud-native automation. Download his CV from the top of the page for full details.";
+      }
+
+      // ── Testimonials / Reviews / Satisfaction ──
+      if (/\btestimonial\b|\breview\b|\bfeedback\b|\bclient\b|\bcustomer\b|\bsatisfaction\b|\brating\b|\brecommend\b|\btrusted\b|\bopinion\b/.test(v)) {
+        return "Clients praise Houssem for his professionalism, deep Azure knowledge, calm approach under pressure, and ability to translate complex requirements into practical solutions. Check the 'Customer Satisfaction Messages' section on the page to read real testimonials!";
+      }
+
+      // ── Stats / Impact / Numbers ──
+      if (/\bstat\b|\bimpact\b|\bmetric\b|\bhow many\b|\bnumber\b|\b120\b|\b98\b|\b99\b|\b24\/7\b/.test(v)) {
+        return "At a glance: 120+ cloud initiatives supported, 99.9% reliability mindset, 98% client satisfaction, and 24/7 operational readiness. These numbers reflect Houssem's consistent, delivery-focused approach to cloud engineering.";
+      }
+
+      // ── Availability / Hire / Collaborate ──
+      if (/\bavailab|\bhire\b|\bfreelance\b|\bcontract\b|\bengage\b|\bwork together\b|\bcollaborat\b|\bopen to\b|\blooking for\b|\bopportunit/.test(v)) {
+        return "Houssem is open to new engagements and collaborations. To discuss availability or a project, please reach out via WhatsApp (+48 510 735 202), LinkedIn, or GitHub using the contact links at the top of the page.";
+      }
+
+      // ── Contact / Social links ──
+      if (/contact|reach out|get in touch|\bemail\b|\bphone\b|whatsapp|linkedin|github|message|\bconnect\b|social|links/.test(v)) {
+        return "You can connect with Houssem through: 📱 WhatsApp (+48 510 735 202) · 💼 LinkedIn (linkedin.com/in/houssem-eddine-bousseliou-770970200) · 🐙 GitHub (github.com/HerrHoussem). All links are available at the top of the page!";
+      }
+
+      // ── Fallback ──
+      return "That's a great question! 🤔 I may not have a specific answer for that yet. Try asking about Houssem's Azure skills, projects, certifications, contact info, or availability. You can also reach him directly via WhatsApp, LinkedIn, or GitHub for a personal response. 😊";
+    }
+
+    function sendMessage() {
+      const text = chatInput.value.trim();
+      if (!text) return;
+      appendMessage('You', text);
+      const reply = respondToPrompt(text);
+      setTimeout(() => appendMessage('Assistant', reply), 250);
+      chatInput.value = '';
+    }
+
+    chatSend.addEventListener('click', sendMessage);
+    chatInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') sendMessage();
+    });
+
+    // ── View-mode toggle (phone / desktop) ──
+    const viewModeToggle = document.getElementById('view-mode-toggle');
+    const viewModeIcon = viewModeToggle.querySelector('i');
+
+    function applyViewMode(mode) {
+      if (mode === 'phone') {
+        body.classList.add('phone-mode');
+        viewModeIcon.className = 'fas fa-desktop';
+        viewModeToggle.setAttribute('aria-label', 'Switch to desktop view');
+        viewModeToggle.title = 'Switch to desktop view';
+      } else {
+        body.classList.remove('phone-mode');
+        viewModeIcon.className = 'fas fa-mobile-alt';
+        viewModeToggle.setAttribute('aria-label', 'Switch to phone view');
+        viewModeToggle.title = 'Switch to phone view';
+      }
+    }
+
+    const savedViewMode = localStorage.getItem('viewMode') || 'desktop';
+    applyViewMode(savedViewMode);
+
+    viewModeToggle.addEventListener('click', () => {
+      const next = body.classList.contains('phone-mode') ? 'desktop' : 'phone';
+      applyViewMode(next);
+      localStorage.setItem('viewMode', next);
+    });
+
+    // ── Mobile nav: highlight active section on scroll ──
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const navSections = document.querySelectorAll('section[id]');
+    let sectionTops = [];
+
+    function cacheSectionTops() {
+      sectionTops = Array.from(navSections).map(sec => ({
+        id: sec.id,
+        top: sec.offsetTop
+      }));
+    }
+
+    function updateMobileNav() {
+      let current = '';
+      sectionTops.forEach(({ id, top }) => {
+        if (window.scrollY >= top - 90) current = id;
+      });
+      mobileNavLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    }
+
+    cacheSectionTops();
+    updateMobileNav();
+    window.addEventListener('resize', () => { cacheSectionTops(); updateMobileNav(); }, { passive: true });
+    // Re-run after full load so image heights are finalised and section tops are accurate
+    window.addEventListener('load', () => { cacheSectionTops(); updateMobileNav(); });
+    window.addEventListener('scroll', updateMobileNav, { passive: true });
+
+
+    // Houssem Portfolio Upgrade: back-to-top button and desktop nav active state
+    const topBtn = document.getElementById('topBtn');
+    if (topBtn) {
+      window.addEventListener('scroll', () => {
+        topBtn.classList.toggle('show', window.scrollY > 520);
+      }, { passive: true });
+      topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    const desktopNavLinks = document.querySelectorAll('.desktop-nav a');
+    function updateDesktopNav() {
+      let current = '';
+      document.querySelectorAll('section[id]').forEach(section => {
+        if (window.scrollY >= section.offsetTop - 110) current = section.id;
+      });
+      desktopNavLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    }
+    updateDesktopNav();
+    window.addEventListener('scroll', updateDesktopNav, { passive: true });
+    window.addEventListener('load', updateDesktopNav);
+
+  </script>
+</body>
+</html>
